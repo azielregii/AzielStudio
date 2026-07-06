@@ -395,21 +395,21 @@ section {
 }
 
 /* ===== Masterpiece (Book) ===== */
-#book .box-container {
+#Masterpiece .box-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   justify-items: center;
 }
 
-#book .box {
+#Masterpiece .box {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-#book .box img {
+#Masterpiece .box img {
   width: 100%;
   max-width: 300px;
   height: auto;
@@ -417,10 +417,16 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#book .box h3 {
+#Masterpiece .box h3 {
   font-size: 2rem;
   margin-top: 1rem;
   color: #333;
+}
+
+@media (max-width: 480px) {
+  #Masterpiece .box-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ===== Contact ===== */
