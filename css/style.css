@@ -413,10 +413,10 @@ section {
 
 
 #book .box-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
   }
   
   #book .box {
@@ -427,7 +427,8 @@ section {
   }
   
   #book .box img {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -437,6 +438,12 @@ section {
     font-size: 2rem;
     margin-top: 1rem;
     color: #333;
+  }
+
+  @media (max-width: 480px) {
+    #book .box-container {
+      grid-template-columns: 1fr;
+    }
   }
   
 
