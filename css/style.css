@@ -580,3 +580,21 @@ p + p {
   }
 }
 
+.portfolio {
+    text-align: center;
+    background: var(--bg);
+}
+
+.portfolio .content img {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio .content .btn {
+    display: block;
+    width: fit-content;
+    margin: 1.5rem auto 0;
+}
