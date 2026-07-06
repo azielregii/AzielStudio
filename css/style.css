@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
-.header .logo img {
-  width: 50px;
-  height: auto;
-}
 
 :root {
   --main-color: #ff9800;
@@ -88,6 +84,7 @@ section {
   letter-spacing: 0.2rem;
 }
 
+/* ===== Header ===== */
 .header {
   background: #ffffff;
   display: flex;
@@ -101,6 +98,11 @@ section {
   right: 0;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo img {
+  width: 50px;
+  height: auto;
 }
 
 .header .navbar {
@@ -144,9 +146,9 @@ section {
 .header .search-form {
   position: absolute;
   top: 115%;
-  right: 7%;
+  right: 2rem;
   background: #fff;
-  width: 50rem;
+  width: 90%;
   height: 5rem;
   display: flex;
   align-items: center;
@@ -235,32 +237,37 @@ section {
   text-align: center;
 }
 
+/* ===== Home ===== */
 .home {
   min-height: 100vh;
   display: flex;
   background: url(../images/IMG_2217.jpeg) no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: left;
+  justify-content: center;
+  text-align: center;
 }
+
 .home .content {
   max-width: 60rem;
 }
 
 .home .content h3 {
-  font-size: 6rem;
+  font-size: 4.5rem;
   padding-top: 4rem;
   text-transform: uppercase;
   color: #ffffff;
 }
 
 .home .content p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: lighter;
   line-height: 1.8;
   padding: 1rem 0;
   color: #d7d7d7;
 }
 
+/* ===== About ===== */
 .about .row {
   display: flex;
   align-items: center;
@@ -294,6 +301,27 @@ section {
   line-height: 1.8;
 }
 
+/* ===== Portfolio ===== */
+.portfolio {
+  text-align: center;
+  background: var(--bg);
+}
+
+.portfolio .content img {
+  max-width: 100%;
+  width: 900px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio .content .btn {
+  display: block;
+  width: fit-content;
+  margin: 1.5rem auto 0;
+}
+
+/* ===== Menu / Photography Gallery ===== */
 .menu .box-container {
   column-count: 3;
   column-gap: 15px;
@@ -312,66 +340,21 @@ section {
   border-radius: 8px;
 }
 
-.menu .box-container .box .PRODUCT {
-  color: #000000;
-  font-size: 2.5rem;
-  padding: 0.5rem 0;
-}
-
-.menu .box-container .box .FLOWERS {
-  color: #000000;
-  font-size: 2.5rem;
-  padding: 0.5rem 0;
-}
-
-.menu .box-container .box .ANIMAL {
-  color: #000000;
-  font-size: 2.5rem;
-  padding: 0.5rem 0;
-}
-
-.menu .box-container .box .VEHICLE {
-  color: #000000;
-  font-size: 2.5rem;
-  padding: 0.5rem 0;
-}
-
-.menu .box-container .box .HUMAN {
-  color: #000000;
-  font-size: 2.5rem;
-  padding: 0.5rem 0;
-}
-
+.menu .box-container .box .PRODUCT,
+.menu .box-container .box .FLOWERS,
+.menu .box-container .box .ANIMAL,
+.menu .box-container .box .VEHICLE,
+.menu .box-container .box .HUMAN,
 .menu .box-container .box .GRADUATION {
   color: #000000;
   font-size: 2.5rem;
   padding: 0.5rem 0;
 }
 
-.menu .box-container .box .PRODUCT span {
-  color: #000000;
-  font-size: 1.5rem;
-  text-decoration: line-through;
-}
-
-.menu .box-container .box .FLOWERS span {
-  color: #000000;
-  font-size: 1.5rem;
-  text-decoration: line-through;
-}
-
-.menu .box-container .box .ANIMALS span {
-  color: #000000;
-  font-size: 1.5rem;
-  text-decoration: line-through;
-}
-
-.menu .box-container .box .VEHICLE span {
-  color: #000000;
-  font-size: 1.5rem;
-  text-decoration: line-through;
-}
-
+.menu .box-container .box .PRODUCT span,
+.menu .box-container .box .FLOWERS span,
+.menu .box-container .box .ANIMALS span,
+.menu .box-container .box .VEHICLE span,
 .menu .box-container .box .HUMAN span {
   color: #000000;
   font-size: 1.5rem;
@@ -383,7 +366,7 @@ section {
   font-size: 1.5rem;
   text-decoration: line-through;
 }
-  
+
 .menu .box-container .box:hover {
   background: #676767;
 }
@@ -392,7 +375,7 @@ section {
   color: #676767;
 }
 
-
+/* ===== Products ===== */
 .Products .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -411,102 +394,98 @@ section {
   line-height: 5rem;
 }
 
+/* ===== Masterpiece (Book) ===== */
 #book .box-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    justify-items: center;
-  }
-  
-  #book .box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  #book .box img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  #book .box h3 {
-    font-size: 2rem;
-    margin-top: 1rem;
-    color: #333;
-  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
 
-  @media (max-width: 480px) {
-    #book .box-container {
-      grid-template-columns: 1fr;
-    }
-  }
+#book .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-  .contact {
-    background: var(--bg);
-    text-align: center;
+#book .box img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#book .box h3 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: #333;
+}
+
+/* ===== Contact ===== */
+.contact {
+  background: var(--bg);
+  text-align: center;
 }
 
 .contact .share {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
-    gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 1rem;
 }
 
 .contact .share a {
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    color: #000;
-    border: var(--border);
-    margin: 0.3rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: #000;
+  border: var(--border);
+  margin: 0.3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
 }
 
 .contact .share a:hover {
-    background-color: var(--main-color);
-    color: #fff;
+  background-color: var(--main-color);
+  color: #fff;
 }
 
 .contact .links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 2rem 0;
-    gap: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  gap: 1rem;
 }
 
 .contact .links a {
-    padding: 0.7rem 2rem;
-    color: #000;
-    border: var(--border);
-    font-size: 2rem;
+  padding: 0.7rem 2rem;
+  color: #000;
+  border: var(--border);
+  font-size: 2rem;
 }
 
 .contact .links a:hover {
-    background: var(--main-color);
-    color: #fff;
+  background: var(--main-color);
+  color: #fff;
 }
 
 .contact .credit {
-    font-size: 2rem;
-    color: #333;
-    font-weight: lighter;
-    padding: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+  font-weight: lighter;
+  padding: 1.5rem;
 }
 
 .contact .credit span {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 
 p strong {
@@ -519,7 +498,7 @@ p + p {
   margin-top: 0.2rem;
 }
 
-/*media queries*/
+/* ===== Media Queries ===== */
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -533,6 +512,7 @@ p + p {
     padding: 2rem 7%;
   }
 }
+
 @media (max-width: 768px) {
   #menu-btn {
     display: inline-block;
@@ -560,46 +540,14 @@ p + p {
   }
 }
 
-.header .search-form {
-  width: 90%;
-  right: 2rem;
-}
-
-.home {
-  background-position: left;
-  justify-content: center;
-  text-align: center;
-}
-
-.home .content h3 {
-  font-size: 4.5rem;
-}
-
-.home .content p {
-  font-size: 1.5rem;
+@media (max-width: 480px) {
+  #book .box-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
   }
-}
-
-.portfolio {
-    text-align: center;
-    background: var(--bg);
-}
-
-.portfolio .content img {
-    max-width: 100%;
-    width: 900px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.portfolio .content .btn {
-    display: block;
-    width: fit-content;
-    margin: 1.5rem auto 0;
 }
