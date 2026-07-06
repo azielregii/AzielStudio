@@ -411,7 +411,6 @@ section {
   line-height: 5rem;
 }
 
-
 #book .box-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -445,7 +444,6 @@ section {
       grid-template-columns: 1fr;
     }
   }
-  
 
   .contact {
     background: var(--bg);
